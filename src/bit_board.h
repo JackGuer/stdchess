@@ -20,6 +20,13 @@ static const char* SQUARE_FMT = " %d";
 static const char* COLUMNS = "\n     a b c d e f g h\n\n";
 static const char* ROWS = "  %d ";
 
+static const U64 NOT_A_FILE = 18374403900871474942ULL;
+static const U64 NOT_H_FILE = 9187201950435737471ULL;
+
+/* Globals */
+
+U64 pawn_attacks[2][64];  // Pawn attacks array [side][square]
+
 /* Enumerations */
 
 enum {
@@ -33,7 +40,14 @@ enum {
   a1, b1, c1, d1, e1, f1, g1, h1
 };
 
+enum {
+  white,
+  black
+};
+
 /* Functions */
+
+U64 mask_pawn_attacks(int square, int side);
 
 void bprint(U64 board);
 

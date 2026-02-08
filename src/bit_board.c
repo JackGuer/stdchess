@@ -8,6 +8,23 @@
 
 #include "bit_board.h"
 
+U64
+mask_pawn_attacks(int square, int side) {
+  U64 attacks = 0ULL;
+  U64 board = 0ULL;
+  // Set piece on board
+  setbit(board, square);
+  // White pawns
+  if (!side) {
+    attacks |= (board >> 7);
+  }
+  // Black pawns
+  else {
+    attacks |= (board << 7);
+  }
+  return attacks;
+}
+
 void
 bprint(U64 board) {
   for (int rank = 0; rank < 8; rank++) {
