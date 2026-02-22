@@ -4,10 +4,11 @@ SO_FILE = lib$(LIB).so
 EXE_FILE = chess_tester
 
 # Directories
-SRCDIR = src
-LIBDIR = lib
-BINDIR = bin
-INCDIR = include
+SRCDIR = $(CURDIR)/src/
+LIBDIR = $(CURDIR)/lib/
+BINDIR = $(CURDIR)/bin/
+INCDIR = $(CURDIR)/include/
+OBJDIR = $(CURDIR)/obj/
 
 # Variables
 CC = gcc
