@@ -1,2 +1,2 @@
-# stdchess
-A standard chess engine written in C.
+# chapi
+"chapi" is standard chess api written in C.
